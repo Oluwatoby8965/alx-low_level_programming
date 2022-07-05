@@ -1,13 +1,9 @@
 #include "main.h"
 
 /**
- * main - Prints _putchar
- * @void: Empty parameter list for main.
- *
- * Description: Prints _putchar w/out stdio
- *
- * Return: 0 for success
-*/
+ * main - Prints putchar
+ * Return: always 0
+ */
 int main(void)
 {
 	_putchar('_');
