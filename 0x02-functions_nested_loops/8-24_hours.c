@@ -1,4 +1,4 @@
-#inlcude "main"
+#inlcude "main.h"
 /**
 * jack_bauer -> prints 24 hours
 */
