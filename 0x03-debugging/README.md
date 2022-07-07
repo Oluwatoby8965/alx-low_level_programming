@@ -1,1 +1,1 @@
-0x03. C - Debugging in ALX
+0x03. C - Debugging
