@@ -5,7 +5,7 @@
 * @: string pointer to passed this function
 * Return: returns length of the string
 */
-int _strlen(char *s)
+size_t _strlen(const char *str)
 {
 	return (strlen(s));
 }
