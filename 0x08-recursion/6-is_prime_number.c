@@ -25,3 +25,15 @@ int prime_found(int i, int j)
 	}
 	return (0);
 }
+/**
+* is_prime_number - shows if is a prime number
+* @n: number
+*
+* Return: the input integer if its a prime number
+*/
+int is_prime_number(int n)
+{
+	int a = 2;
+
+	return (prime_found(a, n));
+}
