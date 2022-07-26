@@ -1,29 +1,30 @@
 #include "main.h"
 
 /**
-* create_array - create locate array
-* @size: size of array
-* @c: type of array
+* _strdup - create newly allocated space in memory with copy of given string
+* @str: string will be copied
 *
-* Return: pointer of array if all is good and Null if fails
+* Return: copied string location or NULL
 */
-char *create_array(unsigned int size, char c)
+char *_strdup(char *str)
 {
-	char *array;
-	unsigned int i;
+	char *cp;
+	unsigned int counter, i;
 
-	if (size ==  0)
+	if (str == NULL)
 		return (NULL);
 
-	array = malloc(sizeof(c) * size);
+	counter = 0;
+	while (str[counter] != '\0')
+		counter++;
 
-	/* Alway trust nobody */
-	if (array == NULL)
+	cp = (char *)malloc(sizeof(char) * (counter + 1));
+
+	if (cp == NULL)
 		return (NULL);
 
-	for (i = 0; i < size; i++)
-		array[i] = c;
+	for (i = 0; i <= counter; i++)
+		cp[i] = str[i];
 
-	return (array);
-
+	return (cp);
 }
