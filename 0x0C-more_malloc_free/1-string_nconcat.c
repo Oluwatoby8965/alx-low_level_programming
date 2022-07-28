@@ -58,5 +58,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		space[i] = s2[j];
 
 	space[i] = '\0';
+
 	return (space);
 }
