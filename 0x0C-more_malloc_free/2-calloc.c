@@ -5,7 +5,7 @@
 * @nmemb: elements of array
 * @size: bytes of the array
 *
-* Return: a pointer to the allocated memory
+* Return: a pointer to the allocated memory.
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
@@ -29,5 +29,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		array[x] = 0;
 	}
+
 	return (array);
 }
