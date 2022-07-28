@@ -29,5 +29,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		array[x] = 0;
 	}
+
 	return (array);
 }
