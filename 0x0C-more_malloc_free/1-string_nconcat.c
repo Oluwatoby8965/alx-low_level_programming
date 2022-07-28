@@ -21,7 +21,7 @@ unsigned int _strlen(char *s)
 * @s2: string 2
 * @n: bytes of s2
 *
-* Return: a pointer with the content of s1 followed by n byte of s2
+* Return: a pointer with the content of s1 followed by n byte of s2.
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
