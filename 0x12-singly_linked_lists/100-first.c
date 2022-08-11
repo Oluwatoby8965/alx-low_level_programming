@@ -1,15 +1,13 @@
 #include <stdio.h>
+
+void tortoiseAndHare(void) __attribute__ ((constructor));
+
 /**
-* firstfunc - prints before the main function is executed.
-*
-* Return: Always 0.
-*/
-void firstfunc(void) __attribute__ ((constructor));
-
-void firstfunc(void)
+* tortoiseAndHare - print line before main
+* Return: nothing
+**/
+void tortoiseAndHare(void)
 {
-	char *m;
-
-	m = "You're beat! and yet, you must allow,\nI bore my house upon my back!\n";
-	printf("%s", m);
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
