@@ -1,31 +1,28 @@
 #include "main.h"
-
+#include <string.h>
 /**
-* _strspn - description
-* @s: string
-* @accept: pointer
-* Return: int
+* _strspn - Function that gets the length of a prefix substring.
+* @s: The complete string
+* @accept: The string to get the length inasmuch it exist in strinh s
+* Return: result.
 */
-
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, j, cmpt = 0;
+	unsigned int i, j, k, len_a;
 
-	for (i = 0; s[i] >= '\0'; i++)
+	k = 0;
+	len_a = strlen(accept);
+	for (i = 0; ((s[i] >= 'a' && s[i] <= 'z')
+			|| (s[i] >= 'A' && s[i] <= 'Z')); i++)
 	{
-		for (j = 0; accept[j] > '\0'; j++)
+		for (j = 0; j < len_a; j++)
 		{
 			if (s[i] == accept[j])
 			{
-				cmpt++;
-				break;
+				k++;
 			}
 		}
-		if (accept[j] == '\0')
-		{
-			break;
-		}
 	}
-	return (cmpt);
+	return (k);
 }

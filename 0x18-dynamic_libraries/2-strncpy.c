@@ -1,22 +1,39 @@
 #include "main.h"
-/**
-* _strncpy - find the length of a string
-* @dest: pointer to the string
-* @src: pointer
-* @n: int
-* Return: destination
-*/
+#include <string.h>
 
+/**
+* _strncpy - Function to copy string into another string.
+* @dest: First string.
+* @src: Second string.
+* @n: The determinant.
+* Return: dest.
+*/
 
 char *_strncpy(char *dest, char *src, int n)
 {
-int i;
+	int i, len, last;
 
-for (i = 0; i < n && src[i] != '\0'; i++)
-	dest[i] = src[i];
+	len = strlen(src);
+	if (n > len)
+	{
+		last = len;
+	}
+	else
+	{
+		last = n;
+	}
 
-for ( ; i < n; i++)
-	dest[i] = '\0';
+	for (i = 0; i < last; i++)
+	{
+		dest[i] = src[i];
+	}
 
-return (dest);
+	if (n > len)
+	{
+		for (i = len; i < n; i++)
+		{
+			dest[i] = '\0';
+		}
+	}
+	return (dest);
 }

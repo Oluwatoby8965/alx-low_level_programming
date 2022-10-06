@@ -1,13 +1,13 @@
-#include "main.h"
+#include <unistd.h>
 
 /**
-* _isupper - check for upper case letter
-* @c : character to check the case
-* Return:0 or 1
+* _putchar - writes the character c to stdout
+* @c: The character to print
+*
+* Return: On success 1.
+* On error, -1 is returned, and errno is set appropriately.
 */
-
-int _isupper(int c)
+int _putchar(char c)
 {
-	return (c >= 65 && c <= 90);
-
+	return (write(1, &c, 1));
 }
