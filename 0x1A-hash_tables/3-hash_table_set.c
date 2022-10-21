@@ -3,6 +3,15 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+* hash_table_set - set a value in a hash table
+*
+* @ht: hash table to set value in
+* @key: key string to set
+* @value: value string to set
+*
+* Return: 1 if successful, 0 if not
+*/
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
